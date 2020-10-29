@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testowa strona</title>
+        <style>
+            .centered {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .centeredText {
+                text-align: center;
+            }
+            #anim{
+                bottom:15%;
+                position: relative;
+                -webkit-animation: linear infinite alternate;
+                -webkit-animation-name: run;
+                -webkit-animation-duration: 5s;
+            }
+            @-webkit-keyframes run {
+                0% { left: 0;}
+                50% { left: 80%;}
+                100%{ left: 0;}
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            td{
+                border: 2px black solid;
+            }
+            .first{
+                background-color: coral;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            .second{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="centeredText">BANNER</h1>
+        <div id="anim">
+            <img src="kia.png" alt="anim" width="350" height="160">
+        </div>
+        <h1 class="centeredText">IMAGE</h1>
+        <img src="dodge.jpg" alt="dodge" class="centered"><
+        <h1 class="centeredText">GIF</h1>
+        <img src="car.gif" alt="car gif" class="centered">
+        <h1 class="centeredText">RAMKI</h1>
+        <table>
+            <tr>
+                <td class="first">Testowy tekst</td>
+                <td class="second">Testowy tekst 2</td>
+            </tr>
+        </table>
+    </body>
+</html>
