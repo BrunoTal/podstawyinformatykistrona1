@@ -1,0 +1,1 @@
+# podstawyinformatykistrona1
