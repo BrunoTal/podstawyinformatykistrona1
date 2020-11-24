@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p id="text">Bruno Talaga</p>
+        <script>
+            function changeTextStyle(){
+                var textElement;
+                var buttonElement;
+                textElement = document.getElementById("text");
+                buttonElement = document.getElementById("clickable");
+                textElement.style.fontSize = "25px";
+                textElement.style.color = "red";
+                textElement.style.backgroundColor = "yellow";
+                buttonElement.innerHTML = "Clicked!";
+            }
+        </script>
+
+        <button id="clickable" type="button" onclick="changeTextStyle()">Click me!</button>
+
+    </body>
+</html>

@@ -1,0 +1,26 @@
+#a, a:visited
+{
+    background-color: rgb(242, 242, 242);
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    display: inline-block;
+    width: 32px;
+}
+#b, b:visited
+{
+    background-color: rgb(251, 251, 251);
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    display: inline-block;
+    width: 32px;
+}
+#a:hover
+{
+    background-color: rgb(209, 209, 209);
+}
+#b:hover
+{
+    background-color: rgb(209, 209, 209);
+}

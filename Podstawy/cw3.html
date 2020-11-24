@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Testowa strona</title>
+        <style>
+            header{
+                border: 1px white solid;
+                background-color: black;
+                color: white;
+            }
+            body{
+                background-color: cornflowerblue;
+            }
+            .centered {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .centeredText {
+                text-align: center;
+            }
+            #anim{
+                bottom:15%;
+                position: relative;
+                -webkit-animation: linear infinite alternate;
+                -webkit-animation-name: run;
+                -webkit-animation-duration: 5s;
+            }
+            @-webkit-keyframes run {
+                0% { left: 0;}
+                50% { left: 80%;}
+                100%{ left: 0;}
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            td{
+                border: 2px black solid;
+            }
+            .first{
+                background-color: coral;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            .second{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            iframe{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+        <header>
+            <h1 class="centeredText">Strona na ćwiczenie</h1>
+        </header>
+    </head>
+    <body>
+        <h2 class="centeredText">BANNER</h1>
+        <div id="anim">
+            <img src="kia.png" alt="anim" width="350" height="160">
+        </div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScr0PGZkkrrM19oa8EFOyt6vQgKZK7Ztpxk1YhEEKiDTTJ4Vw/viewform?embedded=true" width="640" height="490" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <h2 class="centeredText">IMAGE</h1>
+        <img src="dodge.jpg" alt="dodge" class="centered">
+        <h2 class="centeredText">GIF</h1>
+        <img src="car.gif" alt="car gif" class="centered">
+        <h2 class="centeredText">RAMKI</h1>
+        <table>
+            <tr>
+                <td class="first">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet mauris id sapien vestibulum ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus eu lacus ultricies, porttitor felis tristique, luctus lectus. Sed tempus ultrices blandit. Nam sagittis malesuada mi, in pellentesque justo cursus et. Donec laoreet convallis ornare. Vestibulum in aliquet eros. Nulla interdum ipsum quis dignissim tempor. Nam diam mi, aliquet sit amet aliquet sit amet, efficitur at justo. Praesent a pulvinar nunc, vel sagittis lectus. Aenean imperdiet eget lectus malesuada dictum. Sed massa est, gravida sit amet mattis non, tempus a mi. In condimentum efficitur ipsum, vitae interdum risus condimentum at. Fusce vel tempus nunc. Sed eu commodo quam.</td>
+                <td class="second">Vestibulum ultrices turpis ac ante consequat, quis maximus leo imperdiet. Etiam quis metus diam. Fusce in mattis arcu, ac posuere metus. Duis ornare mauris turpis, et euismod odio ullamcorper aliquet. Nam sodales bibendum turpis, id viverra ipsum ornare et. Sed mollis neque sagittis, tincidunt sem et, tempus sapien. Donec in consequat sapien. Suspendisse risus enim, dapibus sed justo ut, consectetur vestibulum urna. Pellentesque lacinia enim orci, id malesuada diam consectetur eu.</td>
+            </tr>
+        </table>
+    </body>
+</html>

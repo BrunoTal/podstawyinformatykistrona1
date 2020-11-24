@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function lightSwitch(sw)
+            {
+                var picture;
+                var imageElement;
+                var textElement;
+                imageElement = document.getElementById("image");
+                textElement = document.getElementById("nameText");
+                picture = sw + "js.png"
+                imageElement.src = picture;
+                textElement.innerHTML = imageElement.src;
+            }
+        </script>
+        <img id="image" src="0js.png" width="128px" height="128px" ><br>
+        <button type="button" onclick="lightSwitch(0)">Image 0</button>
+        <button type="button" onclick="lightSwitch(1)">Image 1</button>
+        <p id="nameText">name</p>
+    </body>
+</html>
