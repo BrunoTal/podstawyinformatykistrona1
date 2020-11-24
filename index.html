@@ -1,22 +1,121 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <style>
+            body{
+                background-color: rgb(49, 49, 49);
+                text-align: center;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color:white;
+            }
+            .hText{
+                float:left;
+                width:100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: black;
+                width: 100%;
+                min-width: 100%;
+            }
+            .navbar a{
+                float:left;
+                font-size: 18px;
+                color: white;
+                padding: 18px 32px;
+                text-decoration: none;
+            }
             .dropdown{
-                background-color: gray;
+                float: left;
+                overflow:hidden;
+            }
+            .dropdown .dropbtn{
+                cursor: pointer;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                color: white;
+                background-color: inherit;
+                margin: 0;
+            }
+            .dropbtn{
+                width: inherit;
+                height: 90px;
+                padding: 32px;
+            }
+            .navbar a:hover, .dropbtn:hover, .dropbtn:focus {
+                background-color: rgb(148, 19, 19);
+            }
+            .dropdown-content{
+                margin-left: -8px;
+                display:none;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: inherit;
+                width: 100%;
+            }
+            .dropdown-content a{
+                float : none;
+                display : block;
+            }
+            .show{
+                display : block;
+            }
+            .hide{
+                display : none;
             }
         </style>
-        <script>
-            function dropMenu(){
-                document.getElementById("list").classList.toggle("show");
-            }
-        </script>
+        <div class="hText">
+            <h1>Bruno Talaga - Zadania i ćwiczenia</h1>
+        </div>
     </head>
     <body>
-        <button onclick="dropMenu" class="dropdown">Strony do ćwiczeń</button>
-        <div id="list" class="list-content">
-            <a href="">1</a>
-            <a href="">2</a>
+        <div class="navbar">
+            <div class="dropdown">
+                <button onclick="dropMenu('list0')" class="dropbtn">Witryny</button>
+                <div id="list0" class="dropdown-content">
+                    <a href="Witryny/calc.html">Kalkulator - 29/9/2020</a>
+                    <a href="Witryny/linksbookmarks.html">links, bookmarks - 20/10/2020</a>
+                    <a href="Witryny/imgmap.html">imgmap - 20/10/2020</a>
+                    <a href="Witryny/picture.html">picture - 27/10/2020</a>
+                    <a href="Witryny/span.html">span - 27/10/2020</a>
+                    <a href="Witryny/list.html">list - 3/11/2020</a>
+                    <a href="Witryny/chess.html">Szachownica - 10/11/2020</a>
+                    <a href="Witryny/iframes.html">iframes - 10/11/2020</a>
+                    <a href="Witryny/iframes2.html">iframes 2 - 17/11/2020</a>
+                    <a href="Witryny/javascript.html">JavaScript - 17/11/2020</a>
+                    <a href="Witryny/javascript2.html">JavaScript 2 - 17/11/2020</a>
+                    <a href="Witryny/layout.html">layout - 24/11/2020</a>
+                </div>
+                <button onclick="dropMenu('list1')" class="dropbtn">Podstawy informatyki w praktyce</button>
+                <div id="list1" class="dropdown-content">
+                    <a href="Podstawy/cw1.html">span - 29/10/2020</a>
+                    <a href="Podstawy/cw2.html">Strona ćwiczenie - 29/10/2020</a>
+                    <a href="Podstawy/cw3.html">Strona ćwiczenie 2 (Google Forms) - 12/11/2020</a>
+                </div>
+            </div>
         </div>
+        <script>
+            function dropMenu(listVal){
+                document.getElementById("list0").classList.toggle("show", false);
+                document.getElementById("list1").classList.toggle("show", false);
+                document.getElementById(listVal).classList.toggle("show");
+            }
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) 
+                        {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
