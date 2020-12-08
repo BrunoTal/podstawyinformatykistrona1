@@ -16,13 +16,13 @@
                 width:100%;
                 background-color: rgba(0, 0, 0, 0.5);
             }
-            .navbar {
+            nav{
                 overflow: hidden;
-                background-color: black;
+                background-color: rgb(16, 16, 16);
                 width: 100%;
                 min-width: 100%;
             }
-            .navbar a{
+            nav a{
                 float:left;
                 font-size: 18px;
                 color: white;
@@ -47,7 +47,7 @@
                 height: 90px;
                 padding: 32px;
             }
-            .navbar a:hover, .dropbtn:hover, .dropbtn:focus {
+            nav a:hover, .dropbtn:hover, .dropbtn:focus {
                 background-color: rgb(148, 19, 19);
             }
             .dropdown-content{
@@ -68,13 +68,16 @@
             .hide{
                 display : none;
             }
-            .content{
+            article{
                 float: left;
+                background-color: rgb(32, 32, 32);
+                width: 75%;
+                min-height: 80vh;
             }
-            .sidebar{
+            aside{
                 float: right;
                 width:25%;
-                background-color: black;
+                background-color: rgb(16, 16, 16);
                 min-height: 80vh;
             }
             #hyperlink{
@@ -91,13 +94,33 @@
                 margin-bottom: 0%;
                 background-color: rgb(32, 32, 32);
             }
+            #footer{
+                cursor: pointer;
+            }
+            .tooltip .tooltiptext{
+                visibility: hidden;
+                width: 128px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                text-align: center;
+                padding: 5px;
+
+                position: absolute;
+                z-index: 1;
+                top: -52px;
+                left: 0;
+            }
+            .tooltip:hover .tooltiptext{
+                visibility: visible;
+            }
+            
         </style>
         <div class="hText">
             <h1>Bruno Talaga - Zadania i ćwiczenia</h1>
         </div>
     </head>
     <body>
-        <div class="navbar">
+        <nav>
             <div class="dropdown">
                 <button onclick="dropMenu('list0')" class="dropbtn">Witryny</button>
                 <div id="list0" class="dropdown-content">
@@ -124,21 +147,26 @@
                     <a href="Podstawy/cw3.html">Strona ćwiczenie 2 (Google Forms) - 12/11/2020</a>
                 </div>
             </div>
-        </div>
-        <div class="sidebar">
+        </nav>
+        <aside>
             <p>Różne linki:</p>
             <a href="https://www.w3schools.com/default.asp" id="hyperlink">www.w3schools.com - HTML, CSS, JavaScript i więcej</a>
             <br>
             <a href="https://github.com" id="hyperlink">www.github.com - Zarządzanie za pomocą Git oraz hostowanie stron</a>
             <br>
             <a href="https://stackoverflow.com" id="hyperlink">stackoverflow.com - Rozwiązywanie problemów programistycznych</a>
+        </aside>
+        <article>
+            <p>Article section</p>
+        </article>
+        <div class="tooltip">
+            <footer id="footer">
+                Strona stworzona przez: Bruno Talaga 2020 | Ostatnia aktualizacja: 02:14PM 08-12-2020
+                <span class="tooltiptext">
+                    Naciśnij aby zamknąć
+                </span>
+            </footer>
         </div>
-        <div class="content">
-            <p>Hello world!</p>
-        </div>
-        <footer id="footer">
-            Strona stworzona przez: Bruno Talaga 2020 | Ostatnia aktualizacja: 02:14PM 08-12-2020
-        </footer>
         <script>
             function dropMenu(listVal){
                 document.getElementById("list0").classList.toggle("show", false);
