@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+                text-align: center;
+                color: black;
+                font-size: 32px;
+                border: 2px solid black;
+            }
+            header{
+                background-color: darkorchid;
+            }
+            section{
+                float: left;
+                width: 60%;
+                background-color: rgb(141, 37, 37);
+                height: 128px;
+            }
+            .middleA{
+                float: right;
+                background-color: rgb(63, 63, 179);
+                width: 40%;
+                height: 192px;
+            }
+            article{
+                float: left;
+                background-color: darkgoldenrod;
+                width: 60%;
+                
+                height: 316px;
+            }
+            .lowerA{
+                float: right;
+                background-color: rgb(115, 204, 204);
+                width: 40%;
+                height: 316px;
+            }
+            footer{
+                clear: both;
+                background-color: dimgray;
+            }
+            @media screen and (max-width:800px){
+                .middleA{
+                    width: 100%;
+                }
+                section{
+                    width: 100%;
+                }
+                article{
+                    width: 100%;
+                }
+                .lowerA{
+                    width: 100%;
+                }
+            }
+        </style>
+        <header>
+            HEADER
+        </header>
+    </head>
+    <body>
+        <section>
+            upper section
+        </section>
+        <aside class="middleA">
+            higher aside
+        </aside>
+        <section>
+            middle section
+        </section>
+        <aside class="middleA">
+            lower aside
+        </aside>
+        <section>
+            lower section
+        </section>
+        <article>
+            article
+        </article>
+        <aside class="lowerA">
+            aside article
+        </aside>
+        <footer>
+            footer
+        </footer>
+    </body>
+</html>
